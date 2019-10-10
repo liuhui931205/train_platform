@@ -1,0 +1,525 @@
+
+/*导出数据功能按钮样式*/
+#export{
+	/*position: absolute;
+	right: 10px;
+	z-index: 1;*/
+	margin-right: 20px;
+	float: right;
+}
+
+/*根据过滤条件搜索模版样式*/
+.searchType{
+	float: left;
+	margin-left: 20px;
+}
+.searchType select{
+	width: 200px;
+	float: left;
+}
+.searchType .searchTypeValue{
+	float: left;
+	width: 130px;
+	margin: 0px 5px;
+}
+.testmodal{
+    width:100%;
+    height: 100%;
+}
+.testmodal .modal1{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 9999 !important;
+}
+.testmodal .modal1 .modal-content{
+    width: 550px;
+    padding-bottom: 30px;
+    min-height: 230px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30px;
+    z-index: 9999;
+}
+.testmodal .modal1 .modal-content .modal-body{
+	width: 450px;
+    line-height: 34px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #333;
+}
+.testmodal .modal1 .modal-content .modal-body .form-group{
+	clear: both;
+	height: 50px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.testmodal .modal1 .modal-content .modal-body .form-group label{
+	line-height: 34px;
+	text-align-last: justify;
+}
+.testmodal .modal1 .modal-content .modal-body .form-group #button1{
+	float: left;
+	width: 40%;
+	margin-top: 15px;
+}
+.testmodal .modal1 .modal-content .modal-body .form-group #button2{
+	float: right;
+	width: 40%;
+	margin-top: 15px;
+}
+
+/*左侧栏图像标注样式*/
+.box-left{
+	width: 70%;
+	float: left;
+	height: 75vh;
+}
+.box-left .box-body{
+	padding: 0px;
+	height: 100%;
+}
+.box-left .box-body>div{
+	padding: 1px;
+}
+.box-left .box-body .body-left-footer{
+	/*padding: 0px 0px 10px 0px;*/
+	padding: 5px;
+}
+/*底部栏操作样式*/
+.body-left-header{
+	height: 5%;
+}
+.body-left-body{
+	height: 90%;
+	position: relative;
+}
+.body-left-body>img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.body-left-footer{
+	border-top: 1px solid #BBB;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	height: 5%;
+	font-size: 20px;
+	color: #000;
+}
+.body-left-footer a{
+	margin-right: 20px;
+	color: #000;
+}
+.body-left-footer .allNumber{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3px;
+    bottom: 0;
+}
+.body-left-footer .allNumber input.beforeIndex{
+	padding: 0 4px;
+    width: 30px;
+    float: left;
+    margin-right: 3px;
+    height: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+/*图片样式*/
+.markImage{
+	width: 100%;
+	height: 100%;
+	/*margin: 10px;*/
+}
+.markImageMax{
+	max-width: 100%;
+	max-height: 100%;
+	/*margin: 10px;*/
+}
+
+/*上方打开目录/导出等按钮*/
+.dataPath{
+	widows: 500px;
+	padding-left: 10px;
+	height: 50px;
+}
+.dataPath input{
+	float: left;
+	width: 200px;
+	margin-right: 10px;
+}
+.dataPath #open-path{
+	float: left;
+	margin-right: 50px;
+}
+/*表头样式*/
+.img-title{
+	margin: 10px;
+}
+
+/*右侧栏图像标注样式*/
+.box-right{
+	margin-left: 1%;
+	width: 29%;
+	float: left;
+	height: 75vh;
+}
+.body-right-header{
+	height: 5%;
+}
+.body-right-body{
+	height: 85%;
+	overflow: auto;
+}
+.body-right-body a i{
+	background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	height:32px;
+	width:32px;
+	display:inline-block;
+	float:left;
+}
+.body-right-body a span{
+	height:32px;
+	line-height:32px;
+	display:inline-block;
+}
+.body-right-footer{
+	padding-right: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+	height: 5%;
+	min-height: 40px;
+	left: 0;
+}
+.body-right-footer #submitMark{
+	float: right;
+	width: 30%;
+}
+.upload{
+    display: none;
+    z-index: 2000;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+.upload span{
+	background-color: #03C440;
+    opacity: .8;
+    padding: 20px 50px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    max-width: 300px;
+    display: inline-block;
+    font-size: 20px;
+}
+.upload span.errorUpload{
+	background-color: #EAA000;
+}
+#loading {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    z-index: 9999;
+}
+#loading img {
+    height: 14px;
+    margin-top: 20%;
+}
+#progressing{
+	background: #333;
+    opacity: 0.4;
+	display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1111;
+    text-align: center;
+}
+#progressing .progress{
+    width: 600px;
+    display: inline-block;
+    margin-top: 20%;
+}
+/*箭头选项样式*/
+.list-group-item{
+	font-size: 18px;
+	padding: 1px;
+}
+.skin-black .main-header>.logo{
+    background-color: #283744;
+    color: #f9f9f9;
+}
+/*列表样式*/
+#example2 tr th{
+	white-space:nowrap;
+}
+.task-top{
+	border-bottom: 1px solid #666;
+    margin-bottom: 15px;
+}
+.task-bottom{
+	height: 400px;
+}
+.task-bottom div{
+    width: 49%;
+    float: left;
+}
+.task-bottom div h4{
+	text-align: center;
+}
+textarea{
+    width: 100%;
+    height: 300px;
+    border: #666 solid 1px;
+    overflow: auto;
+    resize: none;
+}
+.task-modal-content {
+    /*max-height: 1000px;*/
+}
+#log-container {
+	white-space: pre;
+    font-size: 15px;
+    height: 800px;
+    overflow-y: scroll;
+    background: #333;
+    color: #aaa;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: Courier New;
+    line-height: normal;
+    /*max-height: 800px;*/
+}
+.createModel .modal-dialog{
+	width: 70%;
+	height: 90%;
+}
+.createModel .modal-dialog .task-modal-content{
+	height: 100%;
+}
+.createModel .modal-body>div{
+	width: 50%;
+	height: 50%;
+	float: left;
+	padding: 5px;
+    text-align: center;
+	overflow-x: auto;
+	position: relative;
+	opacity: 0.4;
+	pointer-events: none;
+	color: #333333;
+}
+.createModel .modal-body>div.opacity{
+	opacity: 1;
+	pointer-events: all;
+	color: #008D4C;
+}
+.createModel .modal-body>div>div.form-group{
+    height: 35px;
+    width: 400px;
+    margin: 5px 0px;
+    display: inline-block;
+    text-align: left;
+}
+.createModel .modal-body>div .endTask{
+	position: absolute;
+    top: 20px;
+    right: 25px;
+}
+.createModel .modal-body>div>div.weights{
+	display: none;
+}
+.createModel .modal-body>div label{
+    font-weight: normal;
+}
+.stepForm1{
+	border-right: 1px solid #888888;
+	border-bottom: 1px solid #888888;
+}
+.stepForm2{
+	border-bottom: 1px solid #888888;
+}
+.step3{
+	border-right: 1px solid #888888;
+}
+input.form-control{
+	max-width: 200px;
+}
+select.form-control{
+	max-width: 160px;
+}
+label.control-label{
+	line-height: 32px;
+}
+.nextStep{
+    width: 110px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 34px;
+    z-index: 100;
+}
+.checkboxs{
+	width: 50px;
+}
+input[type="checkbox"]{
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	display:none;
+}
+label input[type="checkbox"] + span{
+	width:20px;
+	height:20px;
+	display:inline-block;
+	background:url(../img/checkbox_01.gif) no-repeat;background-position:0 0;
+}
+label input[type="checkbox"]:checked + span{
+	background-position:0 -21px;
+}
+.modelChild{
+	line-height: 35px !important;
+	cursor: pointer;
+	color: darkgoldenrod;
+}
+.fine{
+	font-weight: normal;
+}
+.infoColor{
+	padding: 0px !important;
+	/*padding-left: 66px !important;*/
+}
+.userImage{
+	padding: 5px;
+	width: 50%;
+	height: 400px;
+	float: left;
+	position: relative;
+}
+.userImage img{
+	width: 100%;
+	height: 100%;
+}
+.userImage p{
+	position: absolute;
+    right: 10px;
+    bottom: 5px;
+    margin: 0px;
+	color: cyan;
+}
+.box-body-left{
+    width: 15%;
+    height: 800px;
+    float: left;
+    background-color: #fff;
+    padding: 10px;
+}
+.box-body-right{
+    height: 800px;
+    width: 85%;
+    float: left;
+    background-color: #fff;
+}
+.imgTaskBody > div {
+    margin-bottom: 20px;
+    height: 30px;
+    width: 350px;
+}
+.ftp-dialog .task-modal-content {
+    margin: 0 auto;
+    min-height: 350px;
+    max-height: 900px;
+    width: 500px;
+    position: relative;
+    border-radius: 5px;
+}
+.stepForm3 textarea{
+	white-space: pre;
+	resize: auto;
+}
+.createModel .modal-body>div>div.form-group.train_con{
+	height: 200px;
+}
+.createModel .modal-body>div>div.form-group.data_con{
+	height: 200px;
+}
+.box-body-left .allNumber {
+    padding: 10px;
+	float: left;
+}
+.box-body-left .allNumber input.beforeIndex {
+    padding: 0 5px;
+    width: 30px;
+    float: left;
+    margin-right: 3px;
+    height: 100%;
+}
+.lastImage{
+	float: left;
+	margin-right: 10px;
+}
+.nextImage{
+	float: left;
+}
+tbody .modelChild>span{
+	font-size: 18px;
+}
+#showInfo{
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+}
+
+
+.int8_child{
+	display: none;
+}
+
+#exampleInfo1 tbody tr td span{
+	float:left;
+	height:100%;
+	display:inline-block;
+	width:33.33%;
+	text-align:center;
+}
+#exampleInfo1 thead tr th{
+	text-align:center;
+}
+#exampleInfo1 tbody tr td span:nth-of-type(2){
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+}
+tbody ._tag_info{
+	max-width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+}

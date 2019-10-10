@@ -1,0 +1,345 @@
+[
+	{
+		"data": [
+			{
+				"batch_size": 24,
+				"category_num": 13,
+				"end_date": null,
+				"gpus": "6,7,8,9",
+				"id": 21,
+				"iter_num": 300,
+				"learning_rate": "0.04",
+				"start_date": "Fri, 27 Jul 2018 19:16:00 GMT",
+				"steps": "10000,20000,30000",
+				"task_name": "suzhou"
+			}, {
+				"batch_size": 24,
+				"category_num": 13,
+				"end_date": null,
+				"gpus": "6,7,8,9",
+				"id": 22,
+				"iter_num": 300,
+				"learning_rate": "0.032",
+				"start_date": "Mon, 30 Jul 2018 18:30:00 GMT",
+				"steps": "10000,20000,30000",
+				"task_name": "suzhou_test02"
+			}
+		],
+		"errno": "1",
+		"total_page": 1
+	},
+	{
+		"data": {
+			"batch_size": 24,
+			"category_num": 13,
+			"data_desc": "\u82cf\u5dde\u6570\u636e",
+			"end_date": null,
+			"gpus": "6,7,8,9",
+			"id": 21,
+			"iter_num": 300,
+			"learning_rate": "0.04",
+			"net_desc": "20180727\u795e\u7ecf\u7f51\u7edc",
+			"start_date": "Fri, 27 Jul 2018 19:16:00 GMT",
+			"steps": "10000,20000,30000",
+			"task_desc": "\u82cf\u5dde\u7b2c\u4e09\u6b21",
+			"task_name": "suzhou"
+		},
+		"errno": "1"
+	},
+	{
+		"resp": "{\"_comment\": \"A train framework of mxnet, as general as possible\", \"train\": {\"data_conf\": \"/opt/train_platform/train_task/suzhou/conf/seg_train_data.json\", \"output\": \"output\", \"data_prefix\": \"-\", \"optimizer_params\": {\"lr_scheduler\": \"poly\", \"clip_gradient\": 15, \"learning_rate\": 0.0016, \"wd\": 0.0005, \"momentum\": 0.9}, \"fixed_param_prefix\": [], \"initializer\": [{\"pattern\": \".*\", \"args\": {\"rnd_type\": \"gaussian\", \"magnitude\": 2, \"factor_type\": \"in\"}, \"name\": \"Xavier\"}], \"gpus\": \"0,1\", \"num_epoch\": 1000, \"weights\": \"/opt/train_platform/train_task/suzhou/models/cityscapes_rna-a1_cls19_s8_ep-0001.params\", \"begin_epoch\": -1, \"label_weight\": {\"1\": 1, \"0\": 1, \"3\": 1, \"9\": 1}, \"debug\": 0, \"lr_scheduler_args\": {\"step\": {\"step\": [2000, 3000], \"factor\": 0.1}, \"linear\": {\"frequency\": 50, \"max_min_lr\": 1e-06}, \"poly\": {\"frequency\": 50, \"max_min_lr\": 1e-05, \"power\": 2}}, \"model\": \"kddata_\", \"optimizer\": \"sgd\", \"kvstore\": \"local\", \"checkpoint_period\": 5}, \"logging\": {\"loggers\": {\"multiprocessing\": {\"handlers\": [\"console\", \"mp_file\"], \"level\": \"INFO\"}}, \"version\": 1, \"root\": {\"handlers\": [\"file\"], \"level\": \"INFO\"}, \"formatters\": {\"multiprocessing\": {\"date_fmt\": \"%Y-%m-%d %H:%M:%S\", \"format\": \"%(levelname)s: %(asctime)s: %(filename)s:%(lineno)d * %(processName)s %(message)s\"}, \"standard\": {\"date_fmt\": \"%Y-%m-%d %H:%M:%S\", \"format\": \"%(levelname)s: %(asctime)s: %(filename)s:%(lineno)d * %(thread)d %(message)s\"}}, \"handlers\": {\"mp_console\": {\"formatter\": \"multiprocessing\", \"class\": \"logging.StreamHandler\", \"level\": \"INFO\"}, \"console\": {\"formatter\": \"standard\", \"class\": \"logging.StreamHandler\", \"level\": \"DEBUG\"}, \"file\": {\"filename\": \"./log/train.log\", \"formatter\": \"standard\", \"class\": \"logging.FileHandler\", \"level\": \"INFO\"}, \"mp_file\": {\"filename\": \"./log/train.log\", \"formatter\": \"multiprocessing\", \"class\": \"logging.FileHandler\", \"level\": \"INFO\"}}}, \"_condidate\": {\"lr_scheduler\": \"fixed linear step poly\", \"weights\": \"/opt/train_platform/train_task/suzhou/models/cityscapes_rna-a1_cls19_s8_ep-0001.params\", \"kvstore\": \"local/device\"}}"
+	},
+	{
+		"resp": "{\"_comment\": \"A framework of data iterator for mxnet, as general as possible\", \"train\": {\"max_random_illumination\": 0, \"shuffle\": 1, \"path_imgrec\": \"/opt/train_platform/data/20180727/kd_all_train.rec\", \"max_random_contrast\": 0.1}, \"common\": {\"max_aspect_ratio\": 0.625, \"data_shape\": [3, 400, 400], \"rand_mirror\": true, \"data_name\": \"data\", \"label_name\": \"softmax_label\", \"seed\": -1, \"left_lane_id\": 3, \"prefetch_buffer\": 8, \"preprocess_threads\": 20, \"scale\": 1, \"max_random_contrast\": 0.1, \"max_random_scale\": 0.8, \"mean_g\": 0, \"rand_mirror_prob\": 0.5, \"mean_b\": 0, \"pad\": 0, \"min_aspect_ratio\": 0.375, \"mean_r\": 0, \"std_g\": 1, \"std_b\": 1, \"random_h\": 0, \"random_l\": 0, \"batch_size\": 96, \"min_random_scale\": 0.4, \"random_s\": 0, \"std_r\": 1, \"resize\": -1, \"max_random_illumination\": 0, \"label_map_file\": \"/opt/train_platform/train_task/suzhou/conf/label_map.txt\", \"fill_value\": 127, \"right_lane_id\": 4}, \"val\": {\"max_random_illumination\": 0, \"shuffle\": 0, \"path_imgrec\": \"/opt/train_platform/data/20180727/kd_all_val.rec\", \"max_random_contrast\": 0}}"
+	},
+	{
+		"data": [
+			{
+				"0": [
+					"12",
+					"other",
+					"\u5176\u4ed6"
+				]
+			}, {
+				"1": [
+					"255",
+					"ignore",
+					"Ignore"
+				]
+			}, {
+				"2": [
+					"0",
+					"lane_w",
+					"\u8f66\u9053\u6807\u7ebf-\u767d\u8272"
+				]
+			}, {
+				"3": [
+					"1",
+					"left",
+					"\u5de6\u4fa7\u9053\u8def\u8fb9\u7f18\u7ebf"
+				]
+			}, {
+				"4": [
+					"2",
+					"right",
+					"\u53f3\u4fa7\u9053\u8def\u8fb9\u7f18\u7ebf"
+				]
+			}, {
+				"5": [
+					"3",
+					"v_slow",
+					"\u7eb5\u5411\u51cf\u901f\u6807\u7ebf"
+				]
+			}, {
+				"6": [
+					"4",
+					"bus_lane",
+					"\u4e13\u7528\u8f66\u9053\u6807\u7ebf"
+				]
+			}, {
+				"7": [
+					"5",
+					"stop",
+					"\u505c\u6b62\u7ebf"
+				]
+			}, {
+				"8": [
+					"5",
+					"slow_let",
+					"\u51cf\u901f\u8ba9\u884c\u6807\u7ebf"
+				]
+			}, {
+				"9": [
+					"5",
+					"slow_zone",
+					"\u51cf\u901f\u6807\u7ebf/\u51cf\u901f\u5e26"
+				]
+			}, {
+				"10": [
+					"5",
+					"sidewalk",
+					"\u4eba\u884c\u6a2a\u9053"
+				]
+			}, {
+				"11": [
+					"11",
+					"connection",
+					"\u8def\u9762\u8fde\u63a5\u5e26"
+				]
+			}, {
+				"12": [
+					"6",
+					"stop_station",
+					"\u505c\u9760\u7ad9\u6807\u7ebf"
+				]
+			}, {
+				"13": [
+					"6",
+					"in_out",
+					"\u51fa\u5165\u53e3\u6807\u7ebf"
+				]
+			}, {
+				"14": [
+					"7",
+					"symbol",
+					"\u6587\u5b57\u7b26\u53f7\u7c7b"
+				]
+			}, {
+				"15": [
+					"8",
+					"fish_lane",
+					"\u5bfc\u6d41\u7ebf\uff08\u9c7c\u523a\u7ebf\uff09"
+				]
+			}, {
+				"16": [
+					"5",
+					"stop_gird",
+					"\u505c\u6b62\u7f51\u683c\u6807\u7ebf"
+				]
+			}, {
+				"17": [
+					"5",
+					"distance",
+					"\u8f66\u8ddd\u786e\u8ba4\u7ebf"
+				]
+			}, {
+				"18": [
+					"9",
+					"road",
+					"\u9053\u8def"
+				]
+			}, {
+				"19": [
+					"10",
+					"objects",
+					"\u8f66\u8f86\u53ca\u8def\u9762\u4e0a\u5176\u4ed6\u7269\u4f53"
+				]
+			}, {
+				"20": [
+					"9",
+					"curb",
+					"\u865a\u62df\u8f66\u9053\u7ebf-\u8def\u7f18\u77f3"
+				]
+			}, {
+				"21": [
+					"9",
+					"fence",
+					"\u865a\u62df\u8f66\u9053\u7ebf-\u9632\u62a4\u680f"
+				]
+			}, {
+				"22": [
+					"9",
+					"virtual",
+					"\u865a\u62df\u8f66\u9053\u7ebf-\u5176\u4ed6"
+				]
+			}, {
+				"23": [
+					"0",
+					"tide_lane",
+					"\u6f6e\u6c50\u8f66\u9053\u7ebf"
+				]
+			}, {
+				"24": [
+					"0",
+					"left_wait",
+					"\u5de6\u5f2f\u5f85\u8f6c\u533a\u7ebf"
+				]
+			}, {
+				"25": [
+					"0",
+					"guide_lane",
+					"\u53ef\u53d8\u5bfc\u5411\u8f66\u9053\u7ebf"
+				]
+			}, {
+				"26": [
+					"0",
+					"lane_y",
+					"\u8f66\u9053\u6807\u7ebf-\u9ec4\u8272"
+				]
+			}, {
+				"27": [
+					"5",
+					"hump",
+					"\u51cf\u901f\u4e18"
+				]
+			}, {
+				"28": [
+					"12",
+					"warning",
+					"\u8b66\u544a\u6307\u793a\u724c"
+				]
+			}, {
+				"29": [
+					"12",
+					"prohibition",
+					"\u7981\u4ee4\u6307\u793a\u724c"
+				]
+			}, {
+				"30": [
+					"12",
+					"instructive",
+					"\u6307\u793a\u6807\u5fd7\u724c"
+				]
+			}, {
+				"31": [
+					"12",
+					"highway",
+					"\u9ad8\u901f\u516c\u8def\u6307\u8def\u6807\u5fd7\u724c"
+				]
+			}, {
+				"32": [
+					"12",
+					"directing",
+					"\u666e\u901a\u9053\u8def\u6307\u8def\u6807\u5fd7\u724c"
+				]
+			}, {
+				"33": [
+					"12",
+					"tourist",
+					"\u65c5\u6e38\u533a\u6807\u5fd7\u724c"
+				]
+			}, {
+				"34": [
+					"12",
+					"assist",
+					"\u8f85\u52a9\u6807\u5fd7\u724c"
+				]
+			}, {
+				"35": [
+					"12",
+					"task",
+					"\u4f5c\u4e1a\u533a\u6807\u5fd7\u724c"
+				]
+			}, {
+				"36": [
+					"12",
+					"other",
+					"\u5176\u4ed6\u4ea4\u901a\u6807\u5fd7\u724c"
+				]
+			}, {
+				"37": [
+					"12",
+					"pole",
+					"\u6746"
+				]
+			}, {
+				"38": [
+					"12",
+					"sky",
+					"\u5929\u7a7a"
+				]
+			}, {
+				"39": [
+					"12",
+					"curbs",
+					"\u8def\u7f18\u77f3"
+				]
+			}, {
+				"40": [
+					"12",
+					"barrier",
+					"\u51f8\u578b\u5c4f\u969c"
+				]
+			}, {
+				"41": [
+					"12",
+					"fences",
+					"\u9632\u62a4\u680f"
+				]
+			}, {
+				"42": [
+					"12",
+					"light",
+					"\u706f"
+				]
+			}, {
+				"43": [
+					"9",
+					"cover",
+					"\u4e95\u76d6"
+				]
+			}, {
+				"44": [
+					"10",
+					"fence",
+					"\u53ef\u79fb\u52a8\u6805\u680f"
+				]
+			}, {
+				"45": [
+					"9",
+					"reflector",
+					"\u53cd\u5149\u6807"
+				]
+			}, {
+				"46": [
+					"9",
+					"old_lane",
+					"\u65e7\u8f66\u9053\u7ebf"
+				]
+			}
+		],
+		"errno": "1"
+	}
+]
+
+
