@@ -81,7 +81,7 @@ pyxdg==0.25
 PyYAML==3.12
 redis==2.10.6
 reportlab==3.4.0
-requests==2.18.4
+requests==2.20.0
 requests-unixsocket==0.1.5
 scp==0.13.2
 screen-resolution-extra==0.0.0
