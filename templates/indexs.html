@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type='file' webkitdirectory>  <button >点击测试</button>
+
+</body>
+<script src="../static/bower_components/js/jquery.min.js"></script>
+<script>
+    var files = [];
+    $(document).ready(function(){
+    $("input").change(function(){
+        files = this.files;
+    });
+    $("button").click(function(){
+        var fd = new FormData();
+        for (var i = 0; i < files.length; i++) {
+
+           fd.append("files", files[i]);
+           fd.append("paths", files[i]['webkitRelativePath']);
+
+        }
+           console.log(files[2]['webkitRelativePath']);
+        $.ajax({
+            url: "api/local_upload",
+            method: "POST",
+            data: fd,
+            contentType: false,
+            processData: false,
+            cache: false,
+            success: function(data){
+                console.log(data);
+            }
+        });
+    });})
+</script>
+
+
+</html>

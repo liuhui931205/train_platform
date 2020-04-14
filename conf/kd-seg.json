@@ -1,0 +1,73 @@
+{
+  "prodata": {
+  	"script":"preprocess.py",
+  	"path": "/opt/",
+    "cmd":"python /opt/preprocess.py --input_name={} --output_name={}",
+    "info":"数据预处理",
+    "params": [
+      "input_name",
+      "output_name"
+    ]
+  },
+  "train":{
+  	"script":"train.py",
+  	"path": "/opt/",
+    "cmd":"python /opt/train.py --conf_path={}",
+    "info":"训练",
+    "params": [
+      "conf_path"
+    ]
+  },
+  "trainconf":{
+  	"script":"train.conf",
+  	"path": "/opt/",
+    "cmd":"",
+    "info":"训练配置",
+    "params": []
+  },
+  "test":{
+  	"script":"test.py",
+  	"path": "/opt/",
+    "cmd":"bash /opt/test.py --input_name={} --output_name={} --weight={} --GPU={}",
+    "info":"验证/测试",
+    "params": [
+    	"input_name",
+    	"output_name",
+    	"weight",
+    	"GPU"
+    ]
+  },
+  "consistency":{
+  	"script":"consistency.py",
+  	"path": "/opt/",
+    "cmd":"bash /opt/consistency.py --input_name={} --output_name={} --weight={} --GPU={}",
+    "info":"一致性验证",
+    "params": [
+    	"input_name",
+    	"output_name",
+    	"weight",
+    	"GPU"
+    ]
+  },
+  "evaluate":{
+  	"script":"evaluate.py",
+  	"path": "/opt/",
+    "cmd":"bash /opt/consistency.py --input_name={} --output_name={} --weight={} --GPU={}",
+    "info":"评估",
+    "params": [
+    	"input_name",
+    	"output_name",
+    	"weight",
+    	"GPU"
+    ]
+  },
+  "release":{
+  	"script":"release.py",
+  	"path": "/opt/",
+    "cmd":"bash /opt/release.py --input_name={}",
+    "info":"模型发布",
+    "params": [
+    	"input_name"
+    ]
+  }
+}

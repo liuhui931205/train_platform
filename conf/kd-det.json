@@ -1,0 +1,51 @@
+{
+    "prodata": {
+        "script": "preprocess.py",
+        "path": "/opt/",
+        "cmd": "python /opt/preprocess.py --input_name={} --output_name={}",
+        "info": "\u6570\u636e\u9884\u5904\u7406",
+        "params": ["input_name", "output_name"]
+    },
+    "train": {
+        "script": "train.py",
+        "path": "/opt/",
+        "cmd": "python /opt/train.py --conf_path={}",
+        "info": "\u8bad\u7ec3",
+        "params": ["conf_path"]
+    },
+    "trainconf": {
+        "script": "train.conf",
+        "path": "/opt/",
+        "cmd": "",
+        "info": "\u8bad\u7ec3\u914d\u7f6e",
+        "params": []
+    },
+    "mapconf": {
+        "script": "label_map.txt",
+        "path": "/opt/",
+        "cmd": "",
+        "info": "\u6620\u5c04\u6587\u4ef6",
+        "params": []
+    },
+    "eval": {
+        "script": "test.py",
+        "path": "/opt/",
+        "cmd": "bash /opt/test.py --input_name={} --output_name={} --weight={} --GPU={}",
+        "info": "\u9a8c\u8bc1/\u6d4b\u8bd5",
+        "params": ["input_name", "output_name", "weight", "GPU"]
+    },
+    "consistency": {
+        "script": "consistency.py",
+        "path": "/opt/",
+        "cmd": "bash /opt/consistency.py --input_name={} --output_name={} --weight={} --GPU={}",
+        "info": "\u6620\u5c04\u6587\u4ef6",
+        "params": ["input_name", "output_name", "weight", "GPU"]
+    },
+    "release": {
+        "script": "release.py",
+        "path": "/opt/",
+        "cmd": "bash /opt/release.py --input_name={}",
+        "info": "\u6a21\u578b\u53d1\u5e03",
+        "params": ["input_name"]
+    }
+}
