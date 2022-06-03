@@ -6,7 +6,7 @@ asn1crypto==0.24.0
 Babel==2.8.0
 bcrypt==3.1.7
 billiard==3.6.2.0
-bottle==0.12.13
+bottle==0.12.20
 Brlapi==0.6.6
 celery==3.1.26.post2
 certifi==2018.1.18
