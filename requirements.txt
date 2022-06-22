@@ -46,7 +46,7 @@ Mako==1.0.7
 MarkupSafe==1.0
 matplotlib==2.1.1
 netifaces==0.10.4
-numpy==1.13.3
+numpy==1.22.0
 oauth==1.0.1
 olefile==0.45.1
 paramiko==2.7.1
