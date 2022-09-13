@@ -25,7 +25,7 @@ djangorestframework==3.11.0
 djangorestframework-jwt==1.11.0
 docker==2.5.1
 docker-pycreds==0.2.1
-flower==0.9.3
+flower==1.2.0
 gevent==1.2.2
 Glances==2.11.1
 greenlet==0.4.15
